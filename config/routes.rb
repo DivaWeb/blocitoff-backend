@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'items/create'
-  resources :users do
-    resources :items
-  end
+
+  resources :users
+  resources :items
+
   devise_for :users
 
 

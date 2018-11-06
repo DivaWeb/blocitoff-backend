@@ -1,2 +1,9 @@
 <div>
   <%= @user.email %>
+  <% @user.items.each do |i| %>
+  <ul>
+    <li><%= "#{i}" %></li>
+  </ul>
+  <% end %>
+
+</div>

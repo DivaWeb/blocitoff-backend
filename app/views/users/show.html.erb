@@ -1,9 +1,12 @@
 <div>
   <%= @user.email %>
-  <% @user.items.each do |i| %>
-  <ul>
-    <li><%= "#{i}" %></li>
-  </ul>
-  <% end %>
 
+  <p>
+    <%= render partial: 'items/form'%>
+  </p>
+  <ul>
+      <%= render @user.items %>
+  </ul>
+
+  
 </div>

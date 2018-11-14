@@ -5,14 +5,12 @@ def index
 end
 
   def new
-    user = User.find(params[:user_id])
-    @item = user.items.new(item_params)
+    @item = Item.new
   end
 
   def create
-    user = User.find(params[:user_id])
-    @item = user.items.new(item_params)
-    if @item.save
+     @item = current_user.items.new(item_params)
+     if @item.save
       flash[:success] = "You have added the To Do to your list."
       redirect_to user_session_path
     else
@@ -23,7 +21,7 @@ end
   private
 
   def item_params
-    params.require(:item).permit(:title, :user_id)
+    params.require(:item).permit(:name, :user_id)
   end
 
 end

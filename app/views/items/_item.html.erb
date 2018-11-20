@@ -1,3 +1,8 @@
 <li><%= item.name %>
-<%= link_to " ", user_item_path(@user, item), method: :delete, data: { confirm: "Are you sure?" }, remote: true, class: 'glyphicon glyphicon-ok' %>
+<%= link_to "", user_item_path(@user, item), method: :delete, data: { confirm: "Are you sure?" }, remote: true, class: 'glyphicon glyphicon-ok' %>
+
+<!--<%= link_to user_item_url(id: item.id, user_id: @user.id), method: :delete, remote: true do %>
+          <i class="fas fa-check fa-2x toggle_task task_complete"></i>
+          <% end %>
+-->
 </li>

@@ -1,4 +1,9 @@
-/*$('.delete_item').bind('ajax:success', function() {
+/*$('#item').bind('ajax:success', function() {
         $(this).closest('li').fadeOut();
-});*/
+});
+*/
+/*
 $('li#item_<%= @item.id %>').fadeOut();
+*/
+
+$('#items').html("<%= j (render @items) %>");

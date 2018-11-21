@@ -1,4 +1,4 @@
-<li><%= item.name %>
+<li id = "items"><%= item.name %>
 <%= link_to "", user_item_path(@user, item), method: :delete, data: { confirm: "Are you sure?" }, remote: true, class: 'glyphicon glyphicon-ok' %>
 
 <!--<%= link_to user_item_url(id: item.id, user_id: @user.id), method: :delete, remote: true do %>

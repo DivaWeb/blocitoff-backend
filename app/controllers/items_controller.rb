@@ -2,10 +2,6 @@ class ItemsController < ApplicationController
 respond_to :html, :js, only: :destroy
 
 
-  def index
-    #user = User.find(params[:user_id])
-    @items = item.all
-  end
 
   def new
     @item = Item.new
@@ -23,17 +19,20 @@ respond_to :html, :js, only: :destroy
 
   def destroy
     @item = Item.find(params[:id])
-     @item.destroy
-
-
+    @item.destroy
     respond_to do |format|
       format.html { redirect_to root, notice: "Item was successfully destroyed."}
-      format.json { head :no_content }
-      format.js { render :layout => false }
+      #format.json { head :no_content }
+      format.js
     end
   end
 
   private
+
+  def all_items
+  @items = Item.all
+  @user = current_user
+end
 
   def item_params
     params.require(:item).permit(:name, :user_id)

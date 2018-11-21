@@ -1,9 +1,3 @@
-/*$('#item').bind('ajax:success', function() {
+$('#items').bind('ajax:success', function() {
         $(this).closest('li').fadeOut();
 });
-*/
-/*
-$('li#item_<%= @item.id %>').fadeOut();
-*/
-
-$('#items').html("<%= j (render @items) %>");

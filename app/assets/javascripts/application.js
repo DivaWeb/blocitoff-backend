@@ -14,12 +14,9 @@
 //= require jquery
 //= require bootstrap
 //= require rails-ujs
+//= require jquery.countdown
+//= require jquery.countdown-es
+
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function() {
-    setTimeout(function() {
-        $('#flash_msg').remove();
-    }, 2000);
-});

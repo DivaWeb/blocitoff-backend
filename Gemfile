@@ -28,12 +28,13 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass'
-
+gem 'jquery-countdown-rails', '~> 2.0', '>= 2.0.2'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'dotiw'
+gem 'countdown'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'

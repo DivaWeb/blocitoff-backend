@@ -1,6 +1,6 @@
 <li id = "items"><%= item.name %>
 <!-- <%= distance_of_time_in_words(Time.now, Time.now + 7.days) %> -->
-<%= distance_of_time_in_words(Time.now, 7.days.from_now  )%>
+<%= distance_of_time_in_words(Time.now, Time.now - (7.days + 1.seconds))%>
 <%= link_to "", user_item_path(@user, item), method: :delete, data: { confirm: "Are you sure?" }, remote: true, class: 'glyphicon glyphicon-ok' %>
 
 
